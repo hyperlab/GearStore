@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 import { ApplicationState }  from '../store';
 import * as Products from '../store/Products';
 
-export class Home extends React.Component<any, void> {
+import {BuyButton} from './Buttons';
+
+export class ProductPage extends React.Component<any, void> {
     componentWillMount() {
         // This method runs when the component is first added to the page
         this.props.requestProducts(this.props.params.category);
@@ -29,6 +31,7 @@ export class Home extends React.Component<any, void> {
                     </div>
                 </div>
                 <div dangerouslySetInnerHTML={{__html: product.description}}></div>
+                <BuyButton sku={product.sku} />
             </div>
         </div>;
     }
@@ -39,4 +42,4 @@ export default connect(
         product: Products.selectSingleProduct(state.products, props.params.sku)
     }),
     Products.actionCreators
-)(Home);
+)(ProductPage);
