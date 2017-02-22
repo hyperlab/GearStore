@@ -1,21 +1,30 @@
 import * as React from 'react';
+import ProductGrid from './ProductGrid';
 
-export default class Home extends React.Component<void, void> {
+import { connect } from 'react-redux';
+import { ApplicationState }  from '../store';
+import * as Products from '../store/Products';
+
+// At runtime, Redux will merge together...
+type HomeProps =
+    Products.ProductsState     // ... state we've requested from the Redux store
+    & typeof Products.actionCreators;   // ... plus action creators we've requested
+
+
+export class Home extends React.Component<HomeProps, void> {
+    componentWillMount() {
+        // This method runs when the component is first added to the page
+        this.props.requestProducts(null);
+    }
+
     public render() {
         return <div>
-            <article className="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center">
-            <img src="http://placekitten.com/g/600/300" className="db w-100 br2 br--top" alt="Photo of a kitten looking menacing." />
-            <div className="pa2 ph3-ns pb3-ns">
-                <div className="dt w-100 mt1">
-                <div className="dtc">
-                    <h1 className="f5 f4-ns mv0">Cat</h1>
-                </div>
-                <div className="dtc tr">
-                    <h2 className="f5 mv0">$1,000</h2>
-                </div>
-                </div>
-            </div>
-            </article>
+            <ProductGrid {...this.props} />
         </div>;
     }
 }
+
+export default connect(
+    (state: ApplicationState) => state.products, // Selects which state properties are merged into the component's props
+    Products.actionCreators                 // Selects which action creators are merged into the component's props
+)(Home);
