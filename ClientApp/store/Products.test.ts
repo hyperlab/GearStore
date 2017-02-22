@@ -1,7 +1,7 @@
 import {
   ProductsState, Product,
   reducer,
-  selectProduct
+  selectSingleProduct
 } from './Products';
 import { ApplicationState } from './'
 
@@ -65,7 +65,7 @@ describe('Products store', () => {
     });
 
     describe('selectors', () => {
-        describe('selectProduct', () => {
+        describe('selectSingleProduct', () => {
             it('should return the product with requested id', () => {
                 const productsState: ProductsState = {
                     categorySlug: 'slug',
@@ -83,7 +83,7 @@ describe('Products store', () => {
                     ]
                 };
 
-                expect(selectProduct({products: productsState}, 'product-id'))
+                expect(selectSingleProduct(productsState, 'product-id'))
                     .toEqual(productsState.products[0]);
             });
         });
