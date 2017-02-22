@@ -16,7 +16,9 @@ export default class ProductGrid extends React.Component<ProductGridProps, void>
                     className="w-100 w-third-m w-25-l flex-wrap pa2 black link dim"
                     key={product.sku}
                 >
-                <img src={product.images[0]} className="w-100 db outline black-10" alt={product.name} />
+                <div className="aspect-ratio aspect-ratio--1x1">
+                    <img style={{backgroundImage: `url(${product.images[0]})`}} className="aspect-ratio--object bg-center contain db  black-10" />
+                </div>
                 <div className="pa2 ph3-ns pb3-ns">
                     <div className="dt w-100 mt1">
                     <div className="dtc">
