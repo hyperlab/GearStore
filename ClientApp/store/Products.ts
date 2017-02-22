@@ -89,5 +89,7 @@ export const reducer: Reducer<ProductsState> = (state: ProductsState, action: Kn
     return state || unloadedState;
 };
 
-export const selectProduct = (state, productId: string): Product =>
-    state.products.products.find(p => p.sku === productId)
+
+export const selectSingleProduct = (state: ProductsState, sku: string): Product => {
+    return state.products.find((product: Product) => product.sku === sku)
+}

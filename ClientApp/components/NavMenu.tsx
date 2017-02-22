@@ -7,7 +7,8 @@ import * as Categories from '../store/Categories';
 // At runtime, Redux will merge together...
 type CategoriesProps =
     Categories.CategoriesState     // ... state we've requested from the Redux store
-    & typeof Categories.actionCreators;   // ... plus action creators we've requested
+    & typeof Categories.actionCreators   // ... plus action creators we've requested
+    & { location: any }
 
 
 class NavMenu extends React.Component<CategoriesProps, void> {
@@ -20,18 +21,18 @@ class NavMenu extends React.Component<CategoriesProps, void> {
         const {items} = this.props;
 
         return <nav className="pa3 pa4-ns">
-            <a className="link dim black b f1 f-headline-ns tc db mb3 mb4-ns" href="#" title="Home">Gear Store</a>
+            <Link className="link dim black b f1 f-headline-ns tc db mb3 mb4-ns" to="/" title="Home">Gear Store</Link>
             <div className="tc pb3">
-                <Link to="/" className="link dim gray f6 f5-ns dib mr3">Home</Link>
+                <Link to="/" className="link dim gray f6 f5-ns dib mr3" activeClassName="b">Home</Link>
                 {items.map(item =>
-                    <Link key={item.name} to={`/${item.name}`} className="link dim gray f6 f5-ns dib mr3 pb2" >{item.name}</Link>
+                    <Link key={item.name} to={`/${item.name}`} className="link dim gray f6 f5-ns dib mr3 pb2" activeClassName="b">{item.name}</Link>
                 )}
             </div>
         </nav>;
     }
 }
 
-export default connect(
+export default connect<{},{},{ location: any }>(
     (state: ApplicationState) => state.categories, // Selects which state properties are merged into the component's props
-    Categories.actionCreators                 // Selects which action creators are merged into the component's props
+    Categories.actionCreators                      // Selects which action creators are merged into the component's props
 )(NavMenu);
