@@ -6,11 +6,13 @@ import {
 import { ApplicationState } from './';
 import { unloadedState as categoriesDefaultState } from './Categories';
 
+const defaultState: CartState = {
+    items: [],
+    expanded: false
+};
+
 describe('Cart store', () => {
     describe('reducer', () => {
-        const defaultState: CartState = {
-            items: []
-        };
 
         it('should have a default state', () => {
             expect(reducer(null, { type: 'UNKNOWN_ACTION' })).toEqual(defaultState);
@@ -22,6 +24,7 @@ describe('Cart store', () => {
             };
 
             const result: CartState = {
+                ...defaultState,
                 items: [item]
             };
 
@@ -39,12 +42,13 @@ describe('Cart store', () => {
             };
 
             const state: CartState = {
+                ...defaultState,
                 items: [item]
             };
 
             const action = {
                 type: 'REMOVE_ITEM',
-                productId: item.productId
+                index: 0
             };
 
             expect(reducer(state, action)).toEqual(defaultState);
@@ -55,6 +59,7 @@ describe('Cart store', () => {
         describe('selectItems', () => {
             it('returns all items in cart', () => {
                 const state: CartState = {
+                    ...defaultState,
                     items: [
                         { productId: 'product1' },
                         { productId: 'product2' }
@@ -69,6 +74,7 @@ describe('Cart store', () => {
             it('returns all products in cart', () => {
                 const state: ApplicationState = {
                     cart: {
+                        ...defaultState,
                         items: [{ productId: 'product-id' }]
                     },
                     products: {

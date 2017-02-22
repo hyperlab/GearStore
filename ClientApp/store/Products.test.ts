@@ -83,7 +83,7 @@ describe('Products store', () => {
                     ]
                 };
 
-                expect(selectSingleProduct(productsState, 'product-id'))
+                expect(selectSingleProduct({products: productsState}, 'product-id'))
                     .toEqual(productsState.products[0]);
             });
         });

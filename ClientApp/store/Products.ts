@@ -1,6 +1,6 @@
 import { fetch, addTask } from 'domain-task';
 import { Action, Reducer, ActionCreator } from 'redux';
-import { AppThunkAction } from './';
+import { AppThunkAction, ApplicationState } from './';
 
 // -----------------
 // STATE - This defines the type of data maintained in the Redux store.
@@ -90,6 +90,6 @@ export const reducer: Reducer<ProductsState> = (state: ProductsState, action: Kn
 };
 
 
-export const selectSingleProduct = (state: ProductsState, sku: string): Product => {
-    return state.products.find((product: Product) => product.sku === sku)
+export const selectSingleProduct = (state: {products: ProductsState}, sku: string): Product => {
+    return state.products.products.find((product: Product) => product.sku === sku)
 }

@@ -39,7 +39,7 @@ export class ProductPage extends React.Component<any, void> {
 
 export default connect(
     (state: ApplicationState, props: any) => ({
-        product: Products.selectSingleProduct(state.products, props.params.sku)
+        product: Products.selectSingleProduct(state, props.params.sku)
     }),
     Products.actionCreators
 )(ProductPage);
