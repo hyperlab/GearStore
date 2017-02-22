@@ -24,7 +24,7 @@ class NavMenu extends React.Component<CategoriesProps, void> {
             <div className="tc pb3">
                 <Link to="/" className="link dim gray f6 f5-ns dib mr3">Home</Link>
                 {items.map(item =>
-                    <Link key={item.name} to={item.name} className="link dim gray f6 f5-ns dib mr3 pb2" >{item.name}</Link>
+                    <Link key={item.name} to={`/${item.name}`} className="link dim gray f6 f5-ns dib mr3 pb2" >{item.name}</Link>
                 )}
             </div>
         </nav>;

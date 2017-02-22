@@ -11,7 +11,11 @@ export default class ProductGrid extends React.Component<ProductGridProps, void>
     public render() {
         return <div className="flex flex-row flex-wrap mw9 center pa4">
             {this.props.products.map(product =>
-                <Link to={`/${this.props.categorySlug}/${product.sku}`} className="w-100 w-third-m w-25-l flex-wrap pa2 black link dim">
+                <Link
+                    to={`/${this.props.categorySlug}/${product.sku}`}
+                    className="w-100 w-third-m w-25-l flex-wrap pa2 black link dim"
+                    key={product.sku}
+                >
                 <img src={product.images[0]} className="w-100 db outline black-10" alt={product.name} />
                 <div className="pa2 ph3-ns pb3-ns">
                     <div className="dt w-100 mt1">
