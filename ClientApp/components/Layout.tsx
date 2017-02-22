@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavMenu } from './NavMenu';
+import NavMenu from './NavMenu';
 
 export interface LayoutProps {
     body: React.ReactElement<any>;
