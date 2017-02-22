@@ -1,9 +1,11 @@
 import * as Categories from './Categories';
 import * as Products from './Products';
+import * as Cart from './Cart';
 
 // The top-level state object
 export interface ApplicationState {
     categories: Categories.CategoriesState,
+    cart: Cart.CartState,
     products: Products.ProductsState
 }
 
@@ -12,6 +14,7 @@ export interface ApplicationState {
 // acts on the corresponding ApplicationState property type.
 export const reducers = {
     categories: Categories.reducer,
+    cart: Cart.reducer,
     products: Products.reducer
 };
 

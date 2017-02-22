@@ -54,7 +54,7 @@ export const actionCreators = {
 // ----------------
 // REDUCER - For a given state and action, returns the new state. To support time travel, this must not mutate the old state.
 
-const unloadedState: CategoriesState = { items: [], isLoading: false };
+export const unloadedState: CategoriesState = { items: [], isLoading: false };
 
 export const reducer: Reducer<CategoriesState> = (state: CategoriesState, action: KnownAction) => {
     switch (action.type) {
