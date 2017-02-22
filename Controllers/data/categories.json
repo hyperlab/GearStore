@@ -1,16 +1,5 @@
 [
   {
-    "name": "Gear",
-    "url_key": "gear",
-    "path": "",
-    "active": 1,
-    "is_anchor": 0,
-    "include_in_menu": 1,
-    "position": 4,
-    "display_mode": "PAGE",
-    "custom_layout_update": "<referenceContainer name=\"catalog.leftnav\" remove=\"true\"/>"
-  },
-  {
     "name": "Bags",
     "url_key": "bags",
     "path": "Gear",
@@ -44,18 +33,7 @@
     "custom_layout_update": ""
   },
   {
-    "name": "Collections",
-    "url_key": "collections",
-    "path": "",
-    "active": 0,
-    "is_anchor": 0,
-    "include_in_menu": 0,
-    "position": "",
-    "display_mode": "PAGE",
-    "custom_layout_update": ""
-  },
-  {
-    "name": "New Luma Yoga Collection",
+    "name": "Erin Recommends",
     "url_key": "yoga-new",
     "path": "Collections",
     "active": 1,

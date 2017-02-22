@@ -17,6 +17,12 @@ export class Home extends React.Component<HomeProps, void> {
         // This method runs when the component is first added to the page
         this.props.requestProducts(this.props.params.category);
     }
+    componentWillReceiveProps(newProps) {
+        // This method runs when the component is first added to the page
+        if (newProps.params.category !== this.props.params.category) {
+            this.props.requestProducts(newProps.params.category);
+        }
+    }
 
     public render() {
         return <div>
