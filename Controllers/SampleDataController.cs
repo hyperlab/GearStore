@@ -31,7 +31,7 @@ namespace Test.Controllers
 
             if (category != null) {
                 products = products.FindAll(prd => {
-                    return ((prd as dynamic).category).Contains(category);
+                    return ((prd as dynamic).categories).Contains(category);
                 });
             }
 
