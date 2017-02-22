@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Gear",
+    "url_key": "gear",
+    "path": "",
+    "active": 1,
+    "is_anchor": 0,
+    "include_in_menu": 1,
+    "position": 4,
+    "display_mode": "PAGE",
+    "custom_layout_update": "<referenceContainer name=\"catalog.leftnav\" remove=\"true\"/>"
+  },
+  {
+    "name": "Bags",
+    "url_key": "bags",
+    "path": "Gear",
+    "active": 1,
+    "is_anchor": 1,
+    "include_in_menu": 1,
+    "position": "",
+    "display_mode": "",
+    "custom_layout_update": ""
+  },
+  {
+    "name": "Fitness Equipment",
+    "url_key": "fitness-equipment",
+    "path": "Gear",
+    "active": 1,
+    "is_anchor": 1,
+    "include_in_menu": 1,
+    "position": "",
+    "display_mode": "",
+    "custom_layout_update": ""
+  },
+  {
+    "name": "Watches",
+    "url_key": "watches",
+    "path": "Gear",
+    "active": 1,
+    "is_anchor": 1,
+    "include_in_menu": 1,
+    "position": "",
+    "display_mode": "",
+    "custom_layout_update": ""
+  },
+  {
+    "name": "Collections",
+    "url_key": "collections",
+    "path": "",
+    "active": 0,
+    "is_anchor": 0,
+    "include_in_menu": 0,
+    "position": "",
+    "display_mode": "PAGE",
+    "custom_layout_update": ""
+  },
+  {
+    "name": "New Luma Yoga Collection",
+    "url_key": "yoga-new",
+    "path": "Collections",
+    "active": 1,
+    "is_anchor": 1,
+    "include_in_menu": 0,
+    "position": "",
+    "display_mode": "",
+    "custom_layout_update": ""
+  }
+]
