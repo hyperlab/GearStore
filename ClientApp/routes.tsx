@@ -9,7 +9,7 @@ import ProductPage from './components/ProductPage';
 export default <Route component={ Layout }>
     <Route path='/' components={{ body: HomePage }} />
     <Route path='/:category' components={{ body: CategoryPage }} />
-    <Route path='/:category/:product' components={{ body: ProductPage }} />
+    <Route path='/:category/:sku' components={{ body: ProductPage }} />
 </Route>;
 
 // Enable Hot Module Replacement (HMR)

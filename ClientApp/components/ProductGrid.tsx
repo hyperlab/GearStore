@@ -9,10 +9,10 @@ interface ProductGridProps {
 
 export default class ProductGrid extends React.Component<ProductGridProps, void> {
     public render() {
-        return <div className="flex flex-row flex-wrap mw9 center pa4">
+        return <div className="flex flex-row flex-wrap">
             {this.props.products.map(product =>
                 <Link
-                    to={`/${this.props.categorySlug}/${product.sku}`}
+                    to={`/${this.props.categorySlug || product.categories[0]}/${product.sku}`}
                     className="w-100 w-third-m w-25-l flex-wrap pa2 black link dim"
                     key={product.sku}
                 >
