@@ -8,7 +8,7 @@
     "sourceMap": true,
     "skipDefaultLibCheck": true,
     "lib": ["es6", "dom"],
-    "types": [ "webpack-env", "whatwg-fetch" ],
+    "types": [ "jest", "webpack-env", "whatwg-fetch" ],
     "paths": {
       "history": ["./node_modules/@types/history/index"],
       "redux": ["./node_modules/@types/redux/index"],
