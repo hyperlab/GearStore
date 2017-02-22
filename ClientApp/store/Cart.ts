@@ -1,5 +1,6 @@
 import { Action, Reducer } from 'redux';
 import { AppThunkAction } from './';
+import { Product, selectProduct } from './Products';
 
 // -----------------
 // STATE - This defines the type of data maintained in the Redux store.
@@ -52,3 +53,7 @@ export const reducer: Reducer<CartState> = (state: CartState, action: KnownActio
 
     return state || unloadedState;
 };
+
+export const selectItems = (state): Item[] => state.cart.items;
+export const selectProducts = (state): Product[] =>
+    selectItems(state).map(item => selectProduct(state, item.productId));

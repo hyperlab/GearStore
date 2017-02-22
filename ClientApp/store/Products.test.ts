@@ -1,7 +1,9 @@
 import {
   ProductsState, Product,
-  reducer
+  reducer,
+  selectProduct
 } from './Products';
+import { ApplicationState } from './'
 
 describe('Products store', () => {
     const defaultState: ProductsState = {
@@ -59,6 +61,31 @@ describe('Products store', () => {
         it('should handle unknown actions', () => {
             expect(reducer(defaultState, {type: 'UNKNOWN_ACTION'}))
                 .toEqual(defaultState);
+        });
+    });
+
+    describe('selectors', () => {
+        describe('selectProduct', () => {
+            it('should return the product with requested id', () => {
+                const productsState: ProductsState = {
+                    categorySlug: 'slug',
+                    isLoading: false,
+                    products: [
+                        {
+                            name: 'Test product #1',
+                            images: ['url.jpg'],
+                            categories: ['slug'],
+                            sku: 'product-id',
+                            price: 100,
+                            qty: 10,
+                            description: 'A great product!'
+                        }
+                    ]
+                };
+
+                expect(selectProduct({products: productsState}, 'product-id'))
+                    .toEqual(productsState.products[0]);
+            });
         });
     });
 });
