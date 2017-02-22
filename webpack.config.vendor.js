@@ -26,7 +26,8 @@ module.exports = (env) => {
                 'redux',
                 'redux-thunk',
                 'react-router-redux',
-                'style-loader'
+                'style-loader',
+                'tachyons/css/tachyons.css'
             ],
         },
         output: {
