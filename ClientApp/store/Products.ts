@@ -109,3 +109,28 @@ export const selectSingleProduct = (state: {products: ProductsState}, sku: strin
 export const selectProducts = (state: {products: ProductsState}): Product[] => {
     return state.products.lastResult.map((id: string) => state.products.products[id])
 }
+
+// Shuffle array using Fisher-Yates shuffle
+const shuffle = source => {
+    let output = source.slice();
+    let counter = output.length;
+    while (counter > 0) {
+        const index = Math.floor(Math.random() * counter);
+        counter--;
+        const temp = output[counter];
+        output[counter] = output[index];
+        output[index] = temp;
+    }
+
+    return output;
+};
+
+let shuffledProducts = [];
+
+export const selectRandomProducts = (state: {products: ProductsState}, count: number): Product[] => {
+    if (!shuffledProducts.length) {
+		const products = Object.keys(state.products.products).map(key => state.products.products[key]);
+        shuffledProducts = shuffle(products);
+    }
+    return shuffledProducts.slice(0, count);
+}

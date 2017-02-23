@@ -96,7 +96,11 @@ describe('Cart store', () => {
                     categories: categoriesDefaultState
                 };
 
-                expect(selectProducts(state)).toEqual(state.products.products);
+                const expected = Object.keys(state.products.products).map(key =>
+                    state.products.products[key]
+                )
+
+                expect(selectProducts(state)).toEqual(expected);
             });
         });
     });

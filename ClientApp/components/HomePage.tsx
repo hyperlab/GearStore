@@ -25,7 +25,7 @@ export class Home extends React.Component<HomeProps, void> {
 
 export default connect(
     (state: ApplicationState) => ({
-        products: Products.selectProducts(state)
+        products: Products.selectRandomProducts(state, 8)
     }),
     Products.actionCreators
 )(Home);

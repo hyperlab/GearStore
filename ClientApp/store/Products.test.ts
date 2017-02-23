@@ -1,7 +1,8 @@
 import {
   ProductsState, Product,
   reducer,
-  selectSingleProduct
+  selectSingleProduct,
+  selectRandomProducts
 } from './Products';
 import { ApplicationState } from './'
 
@@ -88,7 +89,36 @@ describe('Products store', () => {
                 };
 
                 expect(selectSingleProduct({products: productsState}, 'product-id'))
-                    .toEqual(productsState.products[0]);
+                    .toEqual(productsState.products['product-id']);
+            });
+        });
+
+        describe('selectRandomProducts', () => {
+            it('should return the amount of requested product', () => {
+                const generateProduct = (id: string): Product => ({
+                    name: `Product ${id}`,
+                    images: [`product-${id}.jpg`],
+                    categories: ['category'],
+                    sku: id,
+                    price: 100,
+                    qty: 10,
+                    description: `Test product ${id}`
+                })
+
+                const productsState: ProductsState = {
+                    categorySlug: 'slug',
+                    isLoading: false,
+                    lastResult: [],
+                    products: {
+                        '1': generateProduct('1'),
+                        '2': generateProduct('2'),
+                        'bag': generateProduct('bag'),
+                        'watch': generateProduct('watch')
+                    }
+                };
+
+                expect(selectRandomProducts({products: productsState}, 3).length)
+                    .toBe(3);
             });
         });
     });
