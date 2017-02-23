@@ -9,7 +9,8 @@ describe('Products store', () => {
     const defaultState: ProductsState = {
         categorySlug: null,
         isLoading: false,
-        products: []
+        products: {},
+        lastResult: []
     };
 
     describe('reducer', () => {
@@ -26,7 +27,8 @@ describe('Products store', () => {
             const result: ProductsState = {
                 categorySlug: action.categorySlug,
                 isLoading: true,
-                products: []
+                products: {},
+                lastResult: []
             };
 
             expect(reducer(defaultState, action)).toEqual(result);
@@ -52,7 +54,8 @@ describe('Products store', () => {
             const result: ProductsState = {
                 categorySlug: 'slug',
                 isLoading: false,
-                products
+                products: { [products[0].sku]: products[0] },
+                lastResult: [products[0].sku]
             };
 
             expect(reducer(defaultState, action)).toEqual(result);
@@ -70,8 +73,8 @@ describe('Products store', () => {
                 const productsState: ProductsState = {
                     categorySlug: 'slug',
                     isLoading: false,
-                    products: [
-                        {
+                    products: {
+                        'product-id': {
                             name: 'Test product #1',
                             images: ['url.jpg'],
                             categories: ['slug'],
@@ -80,7 +83,8 @@ describe('Products store', () => {
                             qty: 10,
                             description: 'A great product!'
                         }
-                    ]
+                    },
+                    lastResult: ['product-id']
                 };
 
                 expect(selectSingleProduct({products: productsState}, 'product-id'))

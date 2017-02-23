@@ -80,15 +80,18 @@ describe('Cart store', () => {
                     products: {
                         categorySlug: null,
                         isLoading: false,
-                        products: [{
-                            name: 'Test product #1',
-                            images: ['url.jpg'],
-                            categories: ['slug'],
-                            sku: 'product-id',
-                            price: 100,
-                            qty: 10,
-                            description: 'A great product!'
-                        }]
+                        products: {
+                            'product-id': {
+                                name: 'Test product #1',
+                                images: ['url.jpg'],
+                                categories: ['slug'],
+                                sku: 'product-id',
+                                price: 100,
+                                qty: 10,
+                                description: 'A great product!'
+                            }
+                        },
+                        lastResult: ['product-id']
                     },
                     categories: categoriesDefaultState
                 };

@@ -6,7 +6,7 @@ import {Product} from '../store/Products';
 
 interface ProductGridProps {
     products: Product[],
-    categorySlug: string
+    categorySlug?: string
 }
 
 export default class ProductGrid extends React.Component<ProductGridProps, void> {

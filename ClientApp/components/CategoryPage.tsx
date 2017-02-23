@@ -6,11 +6,11 @@ import { ApplicationState }  from '../store';
 import * as Products from '../store/Products';
 
 // At runtime, Redux will merge together...
-type HomeProps =
-    Products.ProductsState     // ... state we've requested from the Redux store
-    & typeof Products.actionCreators   // ... plus action creators we've requested
-    & { params: { category: string }}
-
+type HomeProps = {
+    categorySlug: string
+    products: Products.Product[]
+    params: { category: string }
+} & typeof Products.actionCreators
 
 export class Home extends React.Component<HomeProps, void> {
     componentWillMount() {
@@ -26,6 +26,9 @@ export class Home extends React.Component<HomeProps, void> {
 }
 
 export default connect(
-    (state: ApplicationState) => state.products, // Selects which state properties are merged into the component's props
-    Products.actionCreators                 // Selects which action creators are merged into the component's props
+    (state: ApplicationState) => ({
+        products: Products.selectProducts(state),
+        categorySlug: state.products.categorySlug
+    }),
+    Products.actionCreators
 )(Home);
