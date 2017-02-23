@@ -32,14 +32,20 @@ interface toggleAction {
     type: 'TOGGLE_CART'
 }
 
+interface restoreAction {
+    type: 'RESTORE_CART',
+    items: Item[]
+}
+
 // Declare a 'discriminated union' type. This guarantees that all references to 'type' properties contain one of the
 // declared type strings (and not any other arbitrary string).
-type KnownAction = addItemAction | removeItemAction | toggleAction;
+type KnownAction = addItemAction | removeItemAction | toggleAction | restoreAction;
 
 export const actionCreators = {
     addItem: (productId: string): addItemAction => ({ type: 'ADD_ITEM', productId }),
     removeItem: (index: number): removeItemAction => ({ type: 'REMOVE_ITEM', index }),
-    toggleCart: (): toggleAction => ({ type: 'TOGGLE_CART' })
+    toggleCart: (): toggleAction => ({ type: 'TOGGLE_CART' }),
+    restoreCart: (items: Item[]): restoreAction => ({ type: 'RESTORE_CART', items })
 };
 
 
@@ -64,6 +70,11 @@ export const reducer: Reducer<CartState> = (state: CartState, action: KnownActio
             return {
                 ...state,
                 expanded: !state.expanded
+            };
+        case 'RESTORE_CART':
+            return {
+                ...state,
+                items: action.items
             };
         default:
             // The following line guarantees that every action in the KnownAction union has been covered by a case above

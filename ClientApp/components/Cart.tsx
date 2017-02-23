@@ -44,7 +44,7 @@ class Cart extends React.Component<CartProps, void> {
 
         return <ul className="bg-white ma0 pa0 list ba b--black-10 bb-0 shadow-2">
             {this.props.products.map((product, index) => (
-                <li className="flex items-center pa0 ma0 bb b--black-10">
+                <li key={index} className="flex items-center pa0 ma0 bb b--black-10">
                     <Link to={`/${product.categories[0]}/${product.sku}`} className="link black underline-hover flex flex-auto items-center pa2 ma0">
                         <div className="mr2" style={{width: '32px', height: '32px'}}>
                             <ProductImage image={product.images[0]} />
