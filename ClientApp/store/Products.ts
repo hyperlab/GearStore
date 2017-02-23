@@ -76,6 +76,7 @@ export const reducer: Reducer<ProductsState> = (state: ProductsState, action: Kn
             return {
                 ...state,
                 categorySlug: action.categorySlug,
+                lastResult: [],
                 isLoading: true
             };
         case 'RECEIVE_PRODUCTS': {
