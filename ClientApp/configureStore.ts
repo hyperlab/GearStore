@@ -44,7 +44,8 @@ export default function configureStore(initialState?: Store.ApplicationState) {
                         lastState = []
                     }
                 } catch (e) {}
-            } else if (state.cart.items !== lastState) {
+            }
+            if (state.cart.items !== lastState) {
                 lastState = state.cart.items
                 windowIfDefined.localStorage.setItem('cart', JSON.stringify(state.cart.items))
             }
