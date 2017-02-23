@@ -44,13 +44,15 @@ class Cart extends React.Component<CartProps, void> {
 
         return <ul className="bg-white ma0 pa0 list ba b--black-10 bb-0 shadow-2">
             {this.props.products.map((product, index) => (
-                <li className="flex items-center pa2 ma0 bb b--black-10">
-                    <div className="mr2" style={{width: '32px', height: '32px'}}>
-                        <ProductImage image={product.images[0]} />
-                    </div>
-                    <strong>{product.name}</strong>
-                    <span className="ml2">{'$' + product.price}</span>
-                    <button className="bn p1 bg-transparent" onClick={() => this.props.removeItem(index)}>
+                <li className="flex items-center pa0 ma0 bb b--black-10">
+                    <Link to={`/${product.categories[0]}/${product.sku}`} className="link black underline-hover flex flex-auto items-center pa2 ma0">
+                        <div className="mr2" style={{width: '32px', height: '32px'}}>
+                            <ProductImage image={product.images[0]} />
+                        </div>
+                        <strong className="flex-auto">{product.name}</strong>
+                        <span className="ml2 no-underline">{'$' + product.price}</span>
+                    </Link>
+                    <button className="bn pv1 pl0 pr2 bg-transparent" onClick={() => this.props.removeItem(index)}>
                         <img src={deleteIcon} className="db" style={{height: '16px'}} />
                     </button>
                 </li>
