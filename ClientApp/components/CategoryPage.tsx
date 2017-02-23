@@ -20,7 +20,10 @@ export class Home extends React.Component<HomeProps, void> {
 
     public render() {
         return <div>
-            <ProductGrid {...this.props} />
+            { this.props.params.category === this.props.categorySlug ?
+                <ProductGrid {...this.props} />
+                : null
+            }
         </div>;
     }
 }
