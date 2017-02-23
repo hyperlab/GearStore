@@ -9,9 +9,9 @@ export interface LayoutProps {
 
 export class Layout extends React.Component<LayoutProps, void> {
     public render() {
-        return <div className="mw9 center pa4">
+        return <div className="mw9 center pa1 pa4-ns">
             <NavMenu location={this.props.location} />
-            <div key={this.props.location.key}>{ this.props.body }</div>
+            <div className="mb4 mb0-ns" key={this.props.location.key}>{ this.props.body }</div>
             <Cart />
         </div>;
     }

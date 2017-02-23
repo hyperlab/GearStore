@@ -20,8 +20,8 @@ class NavMenu extends React.Component<CategoriesProps, void> {
     public render() {
         const {items} = this.props;
 
-        return <nav className="pa3 pa4-ns">
-            <Link className="link dim black b f1 f-headline-ns tc db mb3 mb4-ns" to="/" title="Home">Gear Store</Link>
+        return <nav className="pa2 pa4-ns">
+            <Link className="link dim black b f1 f-headline-ns tc db mb3 mb4-ns mt3 mt0-ns" to="/" title="Home">Gear Store</Link>
             <div className="tc pb3">
                 <Link to="/" className="link dim gray f6 f5-ns dib mr3" activeClassName="b">Home</Link>
                 {items.map(item =>
