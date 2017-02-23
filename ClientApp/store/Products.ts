@@ -37,6 +37,7 @@ interface ReceiveProductsAction {
     type: 'RECEIVE_PRODUCTS';
     categorySlug: string;
     products: Product[];
+    prefetched?: boolean;
 }
 
 // Declare a 'discriminated union' type. This guarantees that all references to 'type' properties contain one of the
@@ -53,7 +54,7 @@ export const actionCreators = {
 
         // Only load data if it's something we don't already have (and are not already loading)
         if (!state.lastResult.length || state.categorySlug !== categorySlug) {
-            let fetchTask = fetch(`/api/SampleData/Products?category=${categorySlug||''}`)
+            const fetchTask = fetch(`/api/SampleData/Products?category=${categorySlug||''}`)
                 .then(response => response.json() as Promise<Product[]>)
                 .then(data => {
                     dispatch({ type: 'RECEIVE_PRODUCTS', products: data, categorySlug });
@@ -62,6 +63,16 @@ export const actionCreators = {
             addTask(fetchTask); // Ensure server-side prerendering waits for this to complete
             dispatch({ type: 'REQUEST_PRODUCTS', categorySlug });
         }
+    },
+    preloadCartProducts: (): AppThunkAction<KnownAction> => (dispatch, getState) => {
+        const state = getState().products
+        const fetchTask = fetch('/api/SampleData/Products')
+            .then(response => response.json() as Promise<Product[]>)
+            .then(data => {
+                dispatch({ type: 'RECEIVE_PRODUCTS', products: data, prefetched: true, categorySlug: null });
+            });
+
+        addTask(fetchTask); // Ensure server-side prerendering waits for this to complete
     }
 };
 
@@ -80,7 +91,14 @@ export const reducer: Reducer<ProductsState> = (state: ProductsState, action: Kn
                 isLoading: true
             };
         case 'RECEIVE_PRODUCTS': {
-            const lastResult = action.products.map(product => product.sku)
+            // Leave result list and categorySlug unchanged when prefetched
+            const lastResult = action.prefetched ? state.lastResult
+                : action.products.map(product => product.sku);
+            const categorySlug = action.prefetched ? state.categorySlug
+                : action.categorySlug;
+
+            // Cache all loaded products in the store for now as we need them
+            // for the very naive cart implementation
             const products = action.products.reduce((mem: ProductMap, product: Product) => {
                 mem[product.sku] = product;
                 return mem;
@@ -88,8 +106,8 @@ export const reducer: Reducer<ProductsState> = (state: ProductsState, action: Kn
 
             return {
                 ...state,
-                categorySlug: action.categorySlug,
                 isLoading: false,
+                categorySlug,
                 products,
                 lastResult
             };
