@@ -19,7 +19,7 @@ class ProductImage extends React.Component<{image: string}, {loaded: boolean}> {
 
     render() {
         var opacity = (this.state.loaded ? 1 : 0)
-        return <div className="aspect-ratio aspect-ratio--1x1">
+        return <div className="aspect-ratio aspect-ratio--4x3 aspect-ratio--1x1-ns">
             <img
                 style={{
                     backgroundImage: `url(${this.props.image})`,
