@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 class ProductImage extends React.Component<{image: string}, {loaded: boolean}> {
-    private img = null
+    private img
     state = { loaded: false }
 
     private onLoad() {
@@ -9,16 +9,18 @@ class ProductImage extends React.Component<{image: string}, {loaded: boolean}> {
     }
 
     componentDidMount() {
-        const img = new (window as any).Image();
-        img.onload = () => this.onLoad();
-        img.src = this.props.image;
+        this.img = new (window as any).Image();
+        this.img.onload = () => this.onLoad();
+        this.img.src = this.props.image;
+    }
+    componentWillUnmount() {
+        this.img.onload = this.img.src = this.img = null
     }
 
     render() {
         var opacity = (this.state.loaded ? 1 : 0)
         return <div className="aspect-ratio aspect-ratio--1x1">
             <img
-                ref={(img) => { this.img = img }}
                 style={{
                     backgroundImage: `url(${this.props.image})`,
                     opacity, transition: 'all 250ms ease'

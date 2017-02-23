@@ -1,6 +1,6 @@
 [
   {
-    "categories": ["Gear", "Bags"],
+    "categories": ["Bags"],
     "name": "Joust Duffle Bag",
     "sku": "24-MB01",
     "price": 34,
@@ -21,7 +21,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags", "Collections", "Erin Recommends"],
+    "categories": ["Bags", "Collections", "Erin Recommends"],
     "name": "Strive Shoulder Pack",
     "sku": "24-MB04",
     "price": 32,
@@ -42,7 +42,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags"],
+    "categories": ["Bags"],
     "name": "Crown Summit Backpack",
     "sku": "24-MB03",
     "price": 38,
@@ -63,7 +63,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags", "Collections", "New Luma Yoga Collection"],
+    "categories": ["Bags", "Collections", "New Luma Yoga Collection"],
     "name": "Wayfarer Messenger Bag",
     "sku": "24-MB05",
     "price": 45,
@@ -84,7 +84,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags", "Collections", "New Luma Yoga Collection"],
+    "categories": ["Bags", "Collections", "New Luma Yoga Collection"],
     "name": "Rival Field Messenger",
     "sku": "24-MB06",
     "price": 45,
@@ -105,7 +105,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags"],
+    "categories": ["Bags"],
     "name": "Fusion Backpack",
     "sku": "24-MB02",
     "price": 59,
@@ -126,7 +126,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags"],
+    "categories": ["Bags"],
     "name": "Impulse Duffle",
     "sku": "24-UB02",
     "price": 74,
@@ -147,7 +147,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags"],
+    "categories": ["Bags"],
     "name": "Voyage Yoga Bag",
     "sku": "24-WB01",
     "price": 32,
@@ -168,7 +168,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags"],
+    "categories": ["Bags"],
     "name": "Compete Track Tote",
     "sku": "24-WB02",
     "price": 32,
@@ -189,7 +189,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags", "Collections", "Erin Recommends"],
+    "categories": ["Bags", "Collections", "Erin Recommends"],
     "name": "Savvy Shoulder Tote",
     "sku": "24-WB05",
     "price": 32,
@@ -210,7 +210,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags", "Collections", "Erin Recommends"],
+    "categories": ["Bags", "Collections", "Erin Recommends"],
     "name": "Endeavor Daytrip Backpack",
     "sku": "24-WB06",
     "price": 33,
@@ -231,7 +231,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags"],
+    "categories": ["Bags"],
     "name": "Driven Backpack",
     "sku": "24-WB03",
     "price": 36,
@@ -252,7 +252,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags", "Collections", "New Luma Yoga Collection"],
+    "categories": ["Bags", "Collections", "New Luma Yoga Collection"],
     "name": "Overnight Duffle",
     "sku": "24-WB07",
     "price": 45,
@@ -273,7 +273,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Bags", "Collections", "Performance Fabrics"],
+    "categories": ["Bags", "Collections", "Performance Fabrics"],
     "name": "Push It Messenger Bag",
     "sku": "24-WB04",
     "price": 45,
@@ -294,7 +294,7 @@
     "attribute_set": "Bag"
   },
   {
-    "categories": ["Gear", "Watches"],
+    "categories": ["Watches"],
     "name": "Aim Analog Watch",
     "sku": "24-MG04",
     "price": 45,
@@ -313,7 +313,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Watches"],
+    "categories": ["Watches"],
     "name": "Endurance Watch",
     "sku": "24-MG01",
     "price": 49,
@@ -332,7 +332,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Watches", "Collections", "New Luma Yoga Collection"],
+    "categories": ["Watches", "Collections", "New Luma Yoga Collection"],
     "name": "Summit Watch",
     "sku": "24-MG03",
     "price": 54,
@@ -351,7 +351,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Watches", "Collections", "New Luma Yoga Collection"],
+    "categories": ["Watches", "Collections", "New Luma Yoga Collection"],
     "name": "Cruise Dual Analog Watch",
     "sku": "24-MG05",
     "price": 55,
@@ -370,7 +370,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Watches", "Collections", "New Luma Yoga Collection"],
+    "categories": ["Watches", "Collections", "New Luma Yoga Collection"],
     "name": "Dash Digital Watch",
     "sku": "24-MG02",
     "price": 92,
@@ -389,7 +389,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Watches"],
+    "categories": ["Watches"],
     "name": "Luma Analog Watch",
     "sku": "24-WG09",
     "price": 43,
@@ -408,7 +408,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Watches"],
+    "categories": ["Watches"],
     "name": "Bolo Sport Watch",
     "sku": "24-WG01",
     "price": 49,
@@ -427,7 +427,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Watches"],
+    "categories": ["Watches"],
     "name": "Clamber Watch",
     "sku": "24-WG03",
     "price": 54,
@@ -446,7 +446,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Watches", "Collections", "New Luma Yoga Collection"],
+    "categories": ["Watches", "Collections", "New Luma Yoga Collection"],
     "name": "Didi Sport Watch",
     "sku": "24-WG02",
     "price": 92,
@@ -465,7 +465,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Affirm Water Bottle",
     "sku": "24-UG06",
     "price": 7,
@@ -484,7 +484,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Fitness Equipment", "Collections", "Erin Recommends"],
+    "categories": ["Fitness Equipment", "Collections", "Erin Recommends"],
     "name": "Dual Handle Cardio Ball",
     "sku": "24-UG07",
     "price": 12,
@@ -503,7 +503,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Zing Jump Rope",
     "sku": "24-UG04",
     "price": 12,
@@ -522,7 +522,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Pursuit Lumaflex&trade; Tone Band",
     "sku": "24-UG02",
     "price": 16,
@@ -541,7 +541,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Fitness Equipment", "Promotions", "Erin Recommends New", "Collections", "New Luma Yoga Collection", "Collections", "Erin Recommends"],
+    "categories": ["Fitness Equipment", "Promotions", "Erin Recommends New", "Collections", "New Luma Yoga Collection", "Collections", "Erin Recommends"],
     "name": "Go-Get'r Pushup Grips",
     "sku": "24-UG05",
     "price": 19,
@@ -560,7 +560,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Quest Lumaflex&trade; Band",
     "sku": "24-UG01",
     "price": 19,
@@ -579,7 +579,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Foam Yoga Brick",
     "sku": "24-WG084",
     "price": 5,
@@ -598,7 +598,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Foam Roller",
     "sku": "24-WG088",
     "price": 19,
@@ -617,7 +617,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Harmony Lumaflex&trade; Strength Band Kit",
     "sku": "24-UG03",
     "price": 22,
@@ -636,7 +636,7 @@
     "attribute_set": "Gear"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Yoga Strap 6 foot",
     "sku": "24-WG085",
     "price": 14,
@@ -651,7 +651,7 @@
     "visibility": 1
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Yoga Strap 8 foot",
     "sku": "24-WG086",
     "price": 17,
@@ -666,7 +666,7 @@
     "visibility": 1
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Yoga Strap 10 foot",
     "sku": "24-WG087",
     "price": 21,
@@ -681,7 +681,7 @@
     "visibility": 1
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Stasis Ball 55 cm",
     "sku": "24-WG081-gray",
     "price": 23,
@@ -698,7 +698,7 @@
     "url_key": "Sprite Stasis Ball 55 cm gray"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Stasis Ball 55 cm",
     "sku": "24-WG081-pink",
     "price": 23,
@@ -715,7 +715,7 @@
     "url_key": "Sprite Stasis Ball 55 cm pink"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Stasis Ball 55 cm",
     "sku": "24-WG081-blue",
     "price": 23,
@@ -732,7 +732,7 @@
     "url_key": "Sprite Stasis Ball 55 cm blue"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Stasis Ball 65 cm",
     "sku": "24-WG082-gray",
     "price": 27,
@@ -749,7 +749,7 @@
     "url_key": "Sprite Stasis Ball 65 cm gray"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Stasis Ball 65 cm",
     "sku": "24-WG082-pink",
     "price": 27,
@@ -766,7 +766,7 @@
     "url_key": "Sprite Stasis Ball 65 cm pink"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Stasis Ball 65 cm",
     "sku": "24-WG082-blue",
     "price": 27,
@@ -783,7 +783,7 @@
     "url_key": "Sprite Stasis Ball 65 cm blue"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Stasis Ball 75 cm",
     "sku": "24-WG083-gray",
     "price": 32,
@@ -800,7 +800,7 @@
     "url_key": "Sprite Stasis Ball 75 cm gray"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Stasis Ball 75 cm",
     "sku": "24-WG083-pink",
     "price": 32,
@@ -817,7 +817,7 @@
     "url_key": "Sprite Stasis Ball 75 cm pink"
   },
   {
-    "categories": ["Gear", "Fitness Equipment"],
+    "categories": ["Fitness Equipment"],
     "name": "Sprite Stasis Ball 75 cm",
     "sku": "24-WG083-blue",
     "price": 32,

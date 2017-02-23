@@ -2,7 +2,7 @@
   {
     "name": "Bags",
     "url_key": "bags",
-    "path": "Gear",
+    "path": "",
     "active": 1,
     "is_anchor": 1,
     "include_in_menu": 1,
@@ -13,7 +13,7 @@
   {
     "name": "Fitness Equipment",
     "url_key": "fitness-equipment",
-    "path": "Gear",
+    "path": "",
     "active": 1,
     "is_anchor": 1,
     "include_in_menu": 1,
@@ -24,7 +24,7 @@
   {
     "name": "Watches",
     "url_key": "watches",
-    "path": "Gear",
+    "path": "",
     "active": 1,
     "is_anchor": 1,
     "include_in_menu": 1,
@@ -35,7 +35,7 @@
   {
     "name": "Erin Recommends",
     "url_key": "yoga-new",
-    "path": "Collections",
+    "path": "",
     "active": 1,
     "is_anchor": 1,
     "include_in_menu": 0,
