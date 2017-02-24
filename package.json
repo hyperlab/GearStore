@@ -25,6 +25,7 @@
     "domain-task": "^2.0.1",
     "event-source-polyfill": "^0.0.7",
     "extract-text-webpack-plugin": "^2.0.0-rc",
+    "fastclick": "^1.0.6",
     "file-loader": "^0.8.5",
     "json-loader": "^0.5.4",
     "node-noop": "^1.0.0",
