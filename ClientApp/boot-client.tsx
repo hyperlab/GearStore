@@ -3,9 +3,14 @@ import * as ReactDOM from 'react-dom';
 import { browserHistory, Router } from 'react-router';
 import { Provider } from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
+import FastClick from 'FastClick';
 import routes from './routes';
 import configureStore from './configureStore';
 import { ApplicationState }  from './store';
+
+document.addEventListener('DOMContentLoaded', function() {
+    FastClick.attach(document.body);
+}, false);
 
 // Get the application-wide store instance, prepopulating with state from the server where available.
 const initialState = (window as any).initialReduxState as ApplicationState;

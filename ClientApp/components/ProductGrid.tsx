@@ -15,7 +15,7 @@ export default class ProductGrid extends React.Component<ProductGridProps, void>
             {this.props.products.map(product =>
                 <Link
                     to={`/${this.props.categorySlug || product.categories[0]}/${product.sku}`}
-                    className="w-100 w-third-m w-25-l flex-wrap pa2 black link dim"
+                    className="w-100 w-third-m w-25-l flex-wrap pa2 black link dim-n"
                     key={product.sku}
                 >
                 <ProductImage image={product.images[0]} />

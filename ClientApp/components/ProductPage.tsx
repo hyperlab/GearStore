@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { ApplicationState }  from '../store';
 import * as Products from '../store/Products';
 
+import ProductImage from './ProductImage';
 import {BuyButton} from './Buttons';
 
 export class ProductPage extends React.Component<any, void> {
@@ -20,7 +21,9 @@ export class ProductPage extends React.Component<any, void> {
         }
 
         return <div>
-            <img src={product.images[0]} className="w-100 w-50-ns fl-ns db outline black-10" alt={product.name} />
+            <div className="w-100 w-50-ns fl-ns pr2-ns">
+                <ProductImage image={product.images[0]}/>
+            </div>
             <div className="w-100 w-50-ns fl-ns pa2 ph3-ns pb3-ns">
                 <div className="dt w-100 mt1">
                     <div className="dtc">

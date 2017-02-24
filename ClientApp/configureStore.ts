@@ -31,20 +31,24 @@ export default function configureStore(initialState?: Store.ApplicationState) {
     if (windowIfDefined && windowIfDefined.localStorage) {
         // Persist cart items on client side
         let lastState = null
+        let restored = false
         store.subscribe(() => {
             const state = store.getState()
-            if (!lastState) {
+            if (!restored) {
+                restored = true
+
                 try {
                     const items = JSON.parse(windowIfDefined.localStorage.getItem('cart'))
                     if (items.length) {
-                        store.dispatch(Products.actionCreators.requestProducts(null))
+                        store.dispatch(Products.actionCreators.preloadCartProducts())
                         store.dispatch(Cart.actionCreators.restoreCart(items))
                         lastState = items
                     } else {
                         lastState = []
                     }
                 } catch (e) {}
-            } else if (state.cart.items !== lastState) {
+            }
+            if (state.cart.items !== lastState) {
                 lastState = state.cart.items
                 windowIfDefined.localStorage.setItem('cart', JSON.stringify(state.cart.items))
             }

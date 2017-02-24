@@ -19,13 +19,13 @@ class ProductImage extends React.Component<{image: string}, {loaded: boolean}> {
 
     render() {
         var opacity = (this.state.loaded ? 1 : 0)
-        return <div className="aspect-ratio aspect-ratio--4x3 aspect-ratio--1x1-ns">
-            <img
+        return <div className="aspect-ratio aspect-ratio--4x3 aspect-ratio--1x1-ns outline black-10">
+            <div
                 style={{
                     backgroundImage: `url(${this.props.image})`,
                     opacity, transition: 'all 250ms ease'
                 }}
-                className={'aspect-ratio--object bg-center contain db outline black-10'}
+                className={'aspect-ratio--object bg-center contain db bn '}
             />
         </div>;
     }
